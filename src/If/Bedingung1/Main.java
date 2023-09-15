@@ -1,3 +1,5 @@
+package If.Bedingung1;
+
 import java.util.Random;
 
 public class Main {
