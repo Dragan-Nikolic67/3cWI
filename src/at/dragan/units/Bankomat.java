@@ -36,6 +36,7 @@ public class Bankomat {
                 System.out.println("ungültiger Wert");
             }
         }
+        scanner.close();
 
     }
 }
