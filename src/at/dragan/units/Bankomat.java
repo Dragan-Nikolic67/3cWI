@@ -1,11 +1,12 @@
 package at.dragan.units;
+
 import java.util.Random;
 import java.util.Scanner;
 
 public class Bankomat {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int Kontostand =  0;
+        int Kontostand = 0;
         boolean isfinished = false;
         while (!isfinished) {
             System.out.println("Selektieren sie die gewünschte funktion");
@@ -19,7 +20,7 @@ public class Bankomat {
                 number = scanner.nextInt();
                 Kontostand += number;
                 System.out.println("Sie haben " + number + " Euro eingezahlt");
-            }  else if (number == 2) {
+            } else if (number == 2) {
                 System.out.println("Wie viel würden sie abheben?");
                 number = scanner.nextInt();
                 Kontostand -= number;
@@ -31,8 +32,7 @@ public class Bankomat {
                 isfinished = true;
                 System.out.println("Machine is stopping");
 
-            }
-            else {
+            } else {
                 System.out.println("ungültiger Wert");
             }
         }
