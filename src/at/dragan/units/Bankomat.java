@@ -1,5 +1,4 @@
 package at.dragan.units;
-import java.sql.SQLOutput;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -36,7 +35,7 @@ public class Bankomat {
             else {
                 System.out.println("ungültiger Wert");
             }
-        }   
+        }
 
     }
 }
