@@ -13,12 +13,9 @@ public class Ceasar {
         int num = scanner.nextInt();
         String verschluesselterText = encrypt(text, num);
         System.out.println("Verschlüsselter Text: " + verschluesselterText);
-        System.out.println("Um den Text zu entschlüsseln drücken sie 1");
-        int choice = scanner.nextInt();
         String unverschluesselterText = decrypt(verschluesselterText, num);
-        if (choice == 1){
-            System.out.println("Unverschlüsselter Text ist : " + unverschluesselterText);
-        }
+        System.out.println("Unverschlüsselter Text ist : " + unverschluesselterText);
+
 
 
     }
