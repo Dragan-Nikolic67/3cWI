@@ -9,7 +9,7 @@ public class Ceasar {
         System.out.println("Zu verschlüsseln den Text eingeben:");
         String text = scanner.nextLine();
 
-        System.out.println("Um wie viele Stellen sollen die Buchstaben verschobden werden?");
+        System.out.println("Um wie viele Stellen sollen die Buchstaben verschoben werden?");
         int num = scanner.nextInt();
         String verschluesselterText = encrypt(text, num);
         System.out.println("Verschlüsselter Text: " + verschluesselterText);
