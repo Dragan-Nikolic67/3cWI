@@ -23,7 +23,7 @@ public class Ceasar {
     public static String encrypt(String text, int num) {
         StringBuilder verschluesselterText = new StringBuilder(); //wird benutzt um den text leicht zu ändern da der normale String nicht so gut dafür geeignet ist
         for (int i = 0; i < text.length(); i++) {
-            char c = text.charAt(i); //macht den Character an Platz i
+            char c = text.charAt(i); //macht den Character an Platz i.
 
 
             if (Character.isLetter(c)) {  //kontrolliert ob c ein Buchstabe ist
