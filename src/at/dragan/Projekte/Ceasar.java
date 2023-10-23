@@ -17,7 +17,7 @@ public class Ceasar {
         System.out.println("Unverschlüsselter Text ist : " + unverschluesselterText);
 
 
-
+        scanner.close();
     }
 
     public static String encrypt(String text, int num) {
@@ -50,4 +50,5 @@ public class Ceasar {
 
 
     }
+
 }
