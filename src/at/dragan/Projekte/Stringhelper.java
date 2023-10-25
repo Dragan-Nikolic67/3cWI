@@ -8,6 +8,10 @@ public class Stringhelper {
         System.out.println("Geben sie einen Text ein:");
                 String text = scanner.nextLine();
         System.out.println("Die Anzahl der Buchstaben lautet: " + countLetters(text));
+        System.out.println("Hier ist die Anzahl von jeden Buchstaben: " + countLetters2(text));
+        System.out.println("Hier ist der Text rückwarts: ");
+        System.out.println("Ist der Text Palindrom: ");
+
     }
 
     public static int countLetters(String text) {
@@ -17,6 +21,10 @@ public class Stringhelper {
             num++;
         }
         return num;
+    }
+    public static int[] countLetters2(String text) {
+
+        return ;
     }
 
 }
