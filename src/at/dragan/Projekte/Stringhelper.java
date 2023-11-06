@@ -6,11 +6,11 @@ public class Stringhelper {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Geben sie einen Text ein:");
-                String text = scanner.nextLine();
+        String text = scanner.nextLine();
         System.out.println("Die Anzahl der Buchstaben lautet: " + countLetters(text));
-        System.out.println("Hier ist die Anzahl von jeden Buchstaben: " + countLetters2(text));
-        System.out.println("Hier ist der Text rückwarts: ");
-        System.out.println("Ist der Text Palindrom: ");
+        System.out.println("Hier ist die Anzahl von jeden Buchstaben: ");
+        System.out.println("Hier ist der Text rückwarts: " + reverseText(text));
+        System.out.println("Ist der Text Palindrom: " + isPalindrome(text));
 
     }
 
@@ -22,9 +22,17 @@ public class Stringhelper {
         }
         return num;
     }
-    public static int[] countLetters2(String text) {
 
-        return ;
+
+    public static String reverseText(String text) {
+        StringBuilder reversed = new StringBuilder(text);
+        return reversed.reverse().toString();
     }
 
-}
+    public static boolean isPalindrome(String text) {
+        String reversed = reverseText(text);
+        return text.equalsIgnoreCase(reversed);
+    }
+
+
+    }
