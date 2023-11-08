@@ -9,8 +9,10 @@ public class Stringhelper {
         String text = scanner.nextLine();
         System.out.println("Die Anzahl der Buchstaben lautet: " + countLetters(text));
         System.out.println("Hier ist die Anzahl von jeden Buchstaben: ");
+        countLetters2(text);
         System.out.println("Hier ist der Text rückwarts: " + reverseText(text));
         System.out.println("Ist der Text Palindrom: " + isPalindrome(text));
+        scanner.close();
 
     }
 
@@ -34,5 +36,21 @@ public class Stringhelper {
         return text.equalsIgnoreCase(reversed);
     }
 
+    public static void countLetters2(String text) {
+        int[] letterCounts = new int[26];
 
+        for (char c : text.toCharArray()) {
+            if (c >= 'a' && c <= 'z') {
+                int index = c - 'a';
+                letterCounts[index]++;
+            }
+        }
+
+        for (int i = 0; i < 26; i++) {
+            char letter = (char) ('a' + i);
+            if (letterCounts[i] > 0) {
+                System.out.println(letter + ": " + letterCounts[i]);
+            }
+        }
     }
+}
