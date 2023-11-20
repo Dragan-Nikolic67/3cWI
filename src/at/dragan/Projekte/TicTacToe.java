@@ -108,7 +108,7 @@ public class TicTacToe {
     }
 
     public static String Gewinner() {
-        List obereReihe = Arrays.asList(1, 2, 3); //Hier werden paar Lists gemacht wo Arrays gespeichert werden
+        List obereReihe = Arrays.asList(1, 2, 3); //Hier werden paar Lists gemacht wo Zahlen gespeichert werden
         List mittlereReihe = Arrays.asList(4, 5, 6);
         List untereReihe = Arrays.asList(7, 8, 9);
         List linkeSpalte = Arrays.asList(1, 4, 7);
@@ -117,7 +117,7 @@ public class TicTacToe {
         List Diagonale1 = Arrays.asList(1, 5, 9);
         List Diagonale2 = Arrays.asList(3, 5, 7);
 
-        List<List> Gewinnbedingung = new ArrayList<List>(); // Hier wird eine Liste von Listen erstellt wo die vorherigen Array Listen getan werden
+        List<List> Gewinnbedingung = new ArrayList<List>(); // Hier wird eine Liste von Listen erstellt wo die vorherigen Listen getan werden
         Gewinnbedingung.add(obereReihe);
         Gewinnbedingung.add(mittlereReihe);
         Gewinnbedingung.add(untereReihe);
