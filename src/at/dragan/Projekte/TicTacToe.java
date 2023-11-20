@@ -127,7 +127,7 @@ public class TicTacToe {
         Gewinnbedingung.add(Diagonale1);
         Gewinnbedingung.add(Diagonale2);
 
-        for (List<Integer> l : Gewinnbedingung) {
+        for (List l : Gewinnbedingung) {
             if (SpielerPosition.containsAll(l)) {  //Hier wird dann geprüft ob der Spieler dann Alle Elemente von einer Liste eingegeben hat z.B 1 2 3 oder 3 5 7 falls das true ist wird dann Sie haben gewonnen ausgegeben
 
                 return "Sie haben gewonnen!";
