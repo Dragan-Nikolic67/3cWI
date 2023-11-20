@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 
 public class TicTacToe {
-    static ArrayList<Integer> SpielerPosition = new ArrayList<Integer>(); //Eine Liste wo die Spielerfelder gespeichert werden
+    static ArrayList<Integer> SpielerPosition = new ArrayList<Integer>(); //Eine veränderbare Liste wo die Spielerfelder gespeichert werden
     static ArrayList<Integer> BotPosition = new ArrayList<Integer>();
 
     public static void main(String[] args) {
@@ -29,10 +29,9 @@ public class TicTacToe {
                 System.out.println("Feld besetzt bitte wählen sie ein anderes aus: ");
                 SpielerFeld = scanner.nextInt();
             }
-            String Gewinner = Gewinner();
-            System.out.println(Gewinner);
-            if (Gewinner.length() > 0) {
-                System.out.println(Gewinner);
+            String Gewinner1 = Gewinner();
+            System.out.println(Gewinner1);
+            if (Gewinner1.length() > 0) {
                 break;
             }
 
@@ -42,13 +41,14 @@ public class TicTacToe {
             int BotFeld = random.nextInt(1, 10);
             System.out.println(BotFeld);
             while(SpielerPosition.contains(BotFeld) || BotPosition.contains(BotFeld)) {
-                BotFeld = random.nextInt(1, 10);
+                BotFeld = random.nextInt(1,  10);
             }
             Position (SpielFeld, BotFeld, "Bot");
             Spielfeld(SpielFeld);
 
-            if (Gewinner.length() > 0) {
-                System.out.println(Gewinner);
+            Gewinner1 = Gewinner();
+            System.out.println(Gewinner1);
+            if (Gewinner1.length() > 0) {
                 break;
             }
 
@@ -114,8 +114,8 @@ public class TicTacToe {
         List linkeSpalte = Arrays.asList(1, 4, 7);
         List mittlereSpalte = Arrays.asList(2, 5, 8);
         List rechteSpalte = Arrays.asList(3, 6, 9);
-        List DIagonale1 = Arrays.asList(1, 5, 9);
-        List DIagonale2 = Arrays.asList(3, 5, 7);
+        List Diagonale1 = Arrays.asList(1, 5, 9);
+        List Diagonale2 = Arrays.asList(3, 5, 7);
 
         List<List> Gewinnbedingung = new ArrayList<List>(); // Hier wird eine Liste von Listen erstellt wo die vorherigen Array Listen getan werden
         Gewinnbedingung.add(obereReihe);
@@ -124,8 +124,8 @@ public class TicTacToe {
         Gewinnbedingung.add(linkeSpalte);
         Gewinnbedingung.add(mittlereSpalte);
         Gewinnbedingung.add(rechteSpalte);
-        Gewinnbedingung.add(DIagonale1);
-        Gewinnbedingung.add(DIagonale2);
+        Gewinnbedingung.add(Diagonale1);
+        Gewinnbedingung.add(Diagonale2);
 
         for (List<Integer> l : Gewinnbedingung) {
             if (SpielerPosition.containsAll(l)) {  //Hier wird dann geprüft ob der Spieler dann Alle Elemente von einer Liste eingegeben hat z.B 1 2 3 oder 3 5 7 falls das true ist wird dann Sie haben gewonnen ausgegeben
