@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 
 public class TicTacToe {
-    static ArrayList<Integer> SpielerPosition = new ArrayList<Integer>(); //Eine veränderbare Liste wo die Spielerfelder gespeichert werden
+    static ArrayList<Integer> SpielerPosition = new ArrayList<Integer>(); //Eine Liste wo die Spielerfelder gespeichert werden
     static ArrayList<Integer> BotPosition = new ArrayList<Integer>();
 
     public static void main(String[] args) {
@@ -47,7 +47,6 @@ public class TicTacToe {
             Position (SpielFeld, BotFeld, "Bot");
             Spielfeld(SpielFeld);
 
-            Gewinner = Gewinner();
             if (Gewinner.length() > 0) {
                 System.out.println(Gewinner);
                 break;
@@ -129,7 +128,7 @@ public class TicTacToe {
         Gewinnbedingung.add(DIagonale2);
 
         for (List<Integer> l : Gewinnbedingung) {
-            if (SpielerPosition.containsAll(l)) {  //Hier wird dann geprüft ob der Spieler dann All Elemente von einer Liste eingegeben hat z.B 1 2 3 oder 3 5 7 falls das true ist wird dann Sie haben gewonnen ausgegeben
+            if (SpielerPosition.containsAll(l)) {  //Hier wird dann geprüft ob der Spieler dann Alle Elemente von einer Liste eingegeben hat z.B 1 2 3 oder 3 5 7 falls das true ist wird dann Sie haben gewonnen ausgegeben
 
                 return "Sie haben gewonnen!";
             } else if (BotPosition.containsAll(l)) {
