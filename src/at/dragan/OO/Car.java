@@ -7,7 +7,7 @@ public class Car {
     public String serialNumber;
     public double tankVolume;
     public int honkAmmount;
-    private double remainingInstance;
+    private double remainingDistance;
     private String color;
 
     public void drive(){
@@ -32,8 +32,8 @@ public class Car {
     }
 
     public void getRemainingRange(){
-        this.remainingInstance = this.fuelAmount / this.fuelConsumption;
-        System.out.println("Du kannst noch " + remainingInstance + " Kilometer fahren");
+        this.remainingDistance = this.fuelAmount / this.fuelConsumption;
+        System.out.println("Du kannst noch " + remainingDistance + " Kilometer fahren");
     }
 
 }
