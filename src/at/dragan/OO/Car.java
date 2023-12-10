@@ -8,7 +8,13 @@ public class Car {
     public double tankVolume;
     public int honkAmmount;
     private double remainingDistance;
-    private String color;
+    public String color;
+
+    public Car(int fc, String b, String s){
+        this.fuelAmount =fc;
+        this.brand =b;
+        this.serialNumber=s;
+    }
 
     public void drive(){
         this.fuelAmount = this.fuelAmount - this.fuelConsumption;
