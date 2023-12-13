@@ -1,6 +1,7 @@
 package at.dragan.OO;
 
-public class Car {
+public class Car { //Instanzvariabeln, bleiben bis das Objekt stirbt
+    private Engine engine;
     private double fuelConsumption;
     private double fuelAmount;
     private String brand;
@@ -10,7 +11,8 @@ public class Car {
     private double remainingDistance;
     private String color;
 
-    public Car(int fc, String b, String s) {
+    public Car(Engine engine, int fc, String b, String s) {
+        this.engine = engine;
         this.fuelConsumption = fc;
         this.brand = b;
         this.serialNumber = s;
@@ -44,6 +46,7 @@ public class Car {
         System.out.println("Du kannst noch " + remainingDistance + " Kilometer fahren");
     }
 
+
     public void setBrand(String brand) {
         this.brand = brand;
     }
@@ -68,6 +71,7 @@ public class Car {
     public void setTankVolume(double tankVolume) {
         this.tankVolume = tankVolume;
     }
+
     public void setFuelAmount(double fuelAmount) {
         if (fuelAmount > 110) {
             this.fuelAmount = 110;
@@ -75,6 +79,15 @@ public class Car {
             this.fuelAmount = fuelAmount;
         }
 
+    }
+
+
+    public void setEngine(Engine engine) {
+        this.engine = engine;
+    }
+
+    public Engine getEngine() {
+        return engine;
     }
 
     public String getBrand() {
