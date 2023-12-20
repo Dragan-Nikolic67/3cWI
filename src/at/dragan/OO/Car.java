@@ -1,34 +1,43 @@
 package at.dragan.OO;
-
+import at.dragan.OO.FuelTank;
 public class Car { //Instanzvariabeln, bleiben bis das Objekt stirbt
     private Engine engine;
     private double fuelConsumption;
-    private double fuelAmount;
     private String brand;
     private String serialNumber;
-    private double tankVolume;
     private int honkAmmount;
     private double remainingDistance;
     private String color;
+
 
     public Car(Engine engine, int fc, String b, String s) {
         this.engine = engine;
         this.fuelConsumption = fc;
         this.brand = b;
         this.serialNumber = s;
+
     }
 
-    public void drive() {
-        this.fuelAmount = this.fuelAmount - this.fuelConsumption;
+    public void drive(int speed) {
+        if (speed>100){
+            speed = 100;
+        }
+        else{
+            speed = speed;
+        }
+
         System.out.println("I am driving");
+        System.out.println(speed + "Km/h");
+        System.out.println(this.engine.getTank().getFuelAmount());
     }
 
     public void breaking() {
         System.out.println("ich bremse");
+        System.out.println(this.engine.getTank().getFuelAmount());
     }
 
     public void turboBoost() {
-        if (this.fuelAmount > this.tankVolume * 0.1) {
+        if (this.getEngine().getTank().getFuelAmount() > this.engine.getTank().getFuelAmount() * 0.1) {
             System.out.println("SuperBoostMode");
         } else
             System.out.println("Not enough fuel to go to Superboost");
@@ -42,7 +51,7 @@ public class Car { //Instanzvariabeln, bleiben bis das Objekt stirbt
     }
 
     public void getRemainingRange() {
-        this.remainingDistance = this.fuelAmount / this.fuelConsumption;
+        this.remainingDistance = this.getEngine().getTank().getFuelAmount() / this.fuelConsumption;
         System.out.println("Du kannst noch " + remainingDistance + " Kilometer fahren");
     }
 
@@ -56,9 +65,7 @@ public class Car { //Instanzvariabeln, bleiben bis das Objekt stirbt
     }
 
 
-    public void setFuelConsumption(double fuelConsumption) {
-        this.fuelConsumption = fuelConsumption;
-    }
+
 
     public void setHonkAmmount(int honkAmmount) {
         this.honkAmmount = honkAmmount;
@@ -68,18 +75,9 @@ public class Car { //Instanzvariabeln, bleiben bis das Objekt stirbt
         this.serialNumber = serialNumber;
     }
 
-    public void setTankVolume(double tankVolume) {
-        this.tankVolume = tankVolume;
-    }
 
-    public void setFuelAmount(double fuelAmount) {
-        if (fuelAmount > 110) {
-            this.fuelAmount = 110;
-        } else {
-            this.fuelAmount = fuelAmount;
-        }
 
-    }
+
 
 
     public void setEngine(Engine engine) {
@@ -98,17 +96,13 @@ public class Car { //Instanzvariabeln, bleiben bis das Objekt stirbt
         return serialNumber;
     }
 
-    public double getFuelAmount() {
-        return fuelAmount;
-    }
+
 
     public double getFuelConsumption() {
         return fuelConsumption;
     }
 
-    public double getTankVolume() {
-        return tankVolume;
-    }
+
 
     public int getHonkAmmount() {
         return honkAmmount;

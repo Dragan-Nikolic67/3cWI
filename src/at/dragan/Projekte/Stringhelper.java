@@ -38,7 +38,6 @@ public class Stringhelper {
 
     public static void countLetters2(String text) {
         int[] letterCounts = new int[26];
-
         for (char c : text.toCharArray()) {
             if (c >= 'a' && c <= 'z') {
                 int index = c - 'a';
