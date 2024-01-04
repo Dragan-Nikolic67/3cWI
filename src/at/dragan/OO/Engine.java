@@ -18,11 +18,23 @@ public class Engine {
     }
 
     public void drive(int speed) {
-       this.tank.setFuelAmount();
+        if (speed>100){
+            System.out.println("You're going too fast, slow down!");
+        }
+        else{
+            System.out.println("I am driving");
+            System.out.println(speed + "Km/h");
+            this.tank.setFuelAmount(this.tank.getFuelAmount() - this.tank.getFuelConsumption());
+            System.out.println(this.tank.getFuelAmount());
 
-        System.out.println("I am driving");
-        System.out.println(speed + "Km/h");
-        System.out.println(this.tank.getFuelAmount());
+        }
+
+    }
+    public void turboBoost() {
+        if (this.getTank().getFuelAmount() > this.getTank().getTankVolume() * 0.1) {
+            System.out.println("SuperBoostMode");
+        } else
+            System.out.println("Not enough fuel to go to Superboost");
     }
 
 

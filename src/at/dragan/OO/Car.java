@@ -2,7 +2,7 @@ package at.dragan.OO;
 import at.dragan.OO.FuelTank;
 public class Car { //Instanzvariabeln, bleiben bis das Objekt stirbt
     private Engine engine;
-    private double fuelConsumption;
+
     private String brand;
     private String serialNumber;
     private int honkAmmount;
@@ -10,9 +10,8 @@ public class Car { //Instanzvariabeln, bleiben bis das Objekt stirbt
     private String color;
 
 
-    public Car(Engine engine, int fc, String b, String s) {
+    public Car(Engine engine, String b, String s) {
         this.engine = engine;
-        this.fuelConsumption = fc;
         this.brand = b;
         this.serialNumber = s;
 
@@ -20,10 +19,6 @@ public class Car { //Instanzvariabeln, bleiben bis das Objekt stirbt
 
     public void drive(int speed) {
         this.engine.drive(speed);
-
-        System.out.println("I am driving");
-        System.out.println(speed + "Km/h");
-        System.out.println(this.engine.getTank().getFuelAmount());
     }
 
     public void breaking() {
@@ -32,10 +27,7 @@ public class Car { //Instanzvariabeln, bleiben bis das Objekt stirbt
     }
 
     public void turboBoost() {
-        if (this.getEngine().getTank().getFuelAmount() > this.engine.getTank().getFuelAmount() * 0.1) {
-            System.out.println("SuperBoostMode");
-        } else
-            System.out.println("Not enough fuel to go to Superboost");
+        this.engine.turboBoost();
     }
 
     public void honk(int amountOfRepetitions) {
@@ -46,7 +38,7 @@ public class Car { //Instanzvariabeln, bleiben bis das Objekt stirbt
     }
 
     public void getRemainingRange() {
-        this.remainingDistance = this.getEngine().getTank().getFuelAmount() / this.fuelConsumption;
+        this.remainingDistance = this.getEngine().getTank().getFuelAmount() / this.getEngine().getTank().getFuelConsumption();
         System.out.println("Du kannst noch " + remainingDistance + " Kilometer fahren");
     }
 
@@ -89,12 +81,6 @@ public class Car { //Instanzvariabeln, bleiben bis das Objekt stirbt
 
     public String getSerialNumber() {
         return serialNumber;
-    }
-
-
-
-    public double getFuelConsumption() {
-        return fuelConsumption;
     }
 
 
