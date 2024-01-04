@@ -19,12 +19,7 @@ public class Car { //Instanzvariabeln, bleiben bis das Objekt stirbt
     }
 
     public void drive(int speed) {
-        if (speed>100){
-            speed = 100;
-        }
-        else{
-            speed = speed;
-        }
+        this.engine.drive(speed);
 
         System.out.println("I am driving");
         System.out.println(speed + "Km/h");

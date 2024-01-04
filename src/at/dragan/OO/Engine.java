@@ -18,12 +18,7 @@ public class Engine {
     }
 
     public void drive(int speed) {
-        if (speed>100){
-            speed = 100;
-        }
-        else{
-            speed = speed;
-        }
+       this.tank.setFuelAmount();
 
         System.out.println("I am driving");
         System.out.println(speed + "Km/h");
