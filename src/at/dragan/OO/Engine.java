@@ -9,7 +9,7 @@ public class Engine {
     private int horsepower;
     private TYPE type;
 
-    private FuelTank tank;
+        private FuelTank tank;
 
     public Engine(int horsepower, TYPE type, FuelTank tank) {
         this.horsepower = horsepower;

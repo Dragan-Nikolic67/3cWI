@@ -1,5 +1,9 @@
 package at.dragan.OO;
 import at.dragan.OO.FuelTank;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class Car { //Instanzvariabeln, bleiben bis das Objekt stirbt
     private Engine engine;
 
@@ -8,6 +12,8 @@ public class Car { //Instanzvariabeln, bleiben bis das Objekt stirbt
     private int honkAmmount;
     private double remainingDistance;
     private String color;
+
+    private List<RearMirror> mirrors;
 
 
     public Car(Engine engine, String b, String s) {
@@ -43,6 +49,15 @@ public class Car { //Instanzvariabeln, bleiben bis das Objekt stirbt
     }
 
 
+    public void addMirror (RearMirror rearMirror){
+        this.mirrors.add(rearMirror);
+    }
+
+
+    public List<RearMirror> getMirrors() {
+        return mirrors;
+    }
+
     public void setBrand(String brand) {
         this.brand = brand;
     }
@@ -51,9 +66,6 @@ public class Car { //Instanzvariabeln, bleiben bis das Objekt stirbt
         this.color = color;
     }
 
-
-
-
     public void setHonkAmmount(int honkAmmount) {
         this.honkAmmount = honkAmmount;
     }
@@ -61,11 +73,6 @@ public class Car { //Instanzvariabeln, bleiben bis das Objekt stirbt
     public void setSerialNumber(String serialNumber) {
         this.serialNumber = serialNumber;
     }
-
-
-
-
-
 
     public void setEngine(Engine engine) {
         this.engine = engine;
