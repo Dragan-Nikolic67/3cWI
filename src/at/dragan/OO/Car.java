@@ -15,12 +15,16 @@ public class Car { //Instanzvariabeln, bleiben bis das Objekt stirbt
 
     private List<RearMirror> mirrors;
 
+    private List<Tire> tires;
+
+
 
     public Car(Engine engine, String b, String s) {
         this.engine = engine;
         this.brand = b;
         this.serialNumber = s;
-
+        this.mirrors = new ArrayList<>();
+        this.tires = new ArrayList<>();
     }
 
     public void drive(int speed) {
@@ -53,7 +57,12 @@ public class Car { //Instanzvariabeln, bleiben bis das Objekt stirbt
         this.mirrors.add(rearMirror);
     }
 
+    public void addTire (Tire tire){
+        this.tires.add(tire);
+    }
 
+
+    public List<Tire> getTire() {return tires;}
     public List<RearMirror> getMirrors() {
         return mirrors;
     }
