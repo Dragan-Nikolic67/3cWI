@@ -1,4 +1,5 @@
 package at.dragan.OO;
+
 import at.dragan.OO.Car;
 import at.dragan.OO.FuelTank;
 
@@ -9,7 +10,7 @@ public class Engine {
     private int horsepower;
     private TYPE type;
 
-        private FuelTank tank;
+    private FuelTank tank;
 
     public Engine(int horsepower, TYPE type, FuelTank tank) {
         this.horsepower = horsepower;
@@ -18,10 +19,9 @@ public class Engine {
     }
 
     public void drive(int speed) {
-        if (speed>100){
+        if (speed > 100) {
             System.out.println("You're going too fast, slow down!");
-        }
-        else{
+        } else {
             System.out.println("I am driving");
             System.out.println(speed + "Km/h");
             this.tank.setFuelAmount(this.tank.getFuelAmount() - this.tank.getFuelConsumption());
@@ -30,14 +30,13 @@ public class Engine {
         }
 
     }
+
     public void turboBoost() {
         if (this.getTank().getFuelAmount() > this.getTank().getTankVolume() * 0.1) {
             System.out.println("SuperBoostMode");
         } else
             System.out.println("Not enough fuel to go to Superboost");
     }
-
-
 
 
     public int getHorsepower() {

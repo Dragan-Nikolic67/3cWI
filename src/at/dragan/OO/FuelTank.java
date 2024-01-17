@@ -6,19 +6,18 @@ public class FuelTank {
 
     private int fuelConsumption;
 
-    public FuelTank (int tankVolume, int fuelAmount, int fuelConsumption){
-     this.tankVolume = tankVolume;
-     this.fuelConsumption = fuelConsumption;
-        if( fuelAmount > tankVolume){
+    public FuelTank(int tankVolume, int fuelAmount, int fuelConsumption) {
+        this.tankVolume = tankVolume;
+        this.fuelConsumption = fuelConsumption;
+        if (fuelAmount > tankVolume) {
             this.fuelAmount = tankVolume;
-        }
-        else{
+        } else {
             this.fuelAmount = fuelAmount;
         }
-}
+    }
 
     public void setFuelAmount(double fuelAmount) {
-            this.fuelAmount = fuelAmount;
+        this.fuelAmount = fuelAmount;
     }
 
     public double getTankVolume() {

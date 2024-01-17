@@ -9,7 +9,6 @@ public class Car { //Instanzvariabeln, bleiben bis das Objekt stirbt
 
     private String brand;
     private String serialNumber;
-    private int honkAmmount;
     private double remainingDistance;
     private String color;
 
@@ -41,7 +40,7 @@ public class Car { //Instanzvariabeln, bleiben bis das Objekt stirbt
     }
 
     public void honk(int amountOfRepetitions) {
-        for (int i = 0; i < honkAmmount; i++) {
+        for (int i = 0; i < amountOfRepetitions; i++) {
             System.out.println("Tuut");
         }
 
@@ -75,9 +74,7 @@ public class Car { //Instanzvariabeln, bleiben bis das Objekt stirbt
         this.color = color;
     }
 
-    public void setHonkAmmount(int honkAmmount) {
-        this.honkAmmount = honkAmmount;
-    }
+
 
     public void setSerialNumber(String serialNumber) {
         this.serialNumber = serialNumber;
@@ -97,12 +94,6 @@ public class Car { //Instanzvariabeln, bleiben bis das Objekt stirbt
 
     public String getSerialNumber() {
         return serialNumber;
-    }
-
-
-
-    public int getHonkAmmount() {
-        return honkAmmount;
     }
 
     public String getColor() {
