@@ -1,7 +1,4 @@
-package at.dragan.OO;
-
-import at.dragan.OO.Car;
-import at.dragan.OO.FuelTank;
+package at.dragan.OO.Car;
 
 
 public class Engine {

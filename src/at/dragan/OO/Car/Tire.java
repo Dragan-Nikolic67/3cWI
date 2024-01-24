@@ -1,4 +1,4 @@
-package at.dragan.OO;
+package at.dragan.OO.Car;
 
 public class Tire {
     private int Tsize;

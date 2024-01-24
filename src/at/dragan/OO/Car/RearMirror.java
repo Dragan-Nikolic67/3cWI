@@ -1,4 +1,4 @@
-package at.dragan.OO;
+package at.dragan.OO.Car;
 
 public class RearMirror {
     private int size;
