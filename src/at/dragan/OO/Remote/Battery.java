@@ -6,18 +6,26 @@ public class Battery {
 
     public Battery(boolean chargingStatus, int power) {
         this.chargingStatus = chargingStatus;
-        this.power = power;
+        if (power > 100 || power < 0) {
+            System.out.println("invalid power");
+        } else {
+            this.power = power;
+        }
+
     }
 
     public void Charge() {
         if (!chargingStatus) {
             this.power = power + 5;
             chargingStatus = true;
+            if (power > 100) {
+                this.power = 100;
+            }
         } else {
             System.out.println("Battery is already charging");
         }
-
     }
+
 
     public void disconnectCharge() {
         if (chargingStatus) {
