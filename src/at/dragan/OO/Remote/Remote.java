@@ -54,6 +54,7 @@ public class Remote {
         if (isOn) {
             System.out.println("Battery1 : Kein Verbraucher angeschlossen");
             System.out.println("Battery2 : Kein Verbraucher angeschlossen");
+            isOn = false;
 
         } else {
             System.out.println("Remote schon ausgeschaltet");
