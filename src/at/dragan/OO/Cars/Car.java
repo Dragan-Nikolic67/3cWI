@@ -3,24 +3,28 @@ package at.dragan.OO.Cars;
 public class Car {
     private int speed;
     private String color;
-    private int price;
-    private int fuelUsage;
+    private double price;
+    private double fuelUsage;
     private Engine engine;
     private Manufacturer manufacturer;
     private int driven_KM;
 
-    public Car(int speed, String color, int price, int fuelUsage, Engine engine, Manufacturer manufacturer, int driven_KM) {
+    public Car(int speed, String color, double price, double fuelUsage, Engine engine, Manufacturer manufacturer, int driven_KM) {
         if (speed > 100 || speed < 0) {
             System.out.println("invalid speed");
         } else {
             this.speed = speed;
         }
         this.color = color;
-        this.price = price;
-        this.fuelUsage = fuelUsage;
+        if (driven_KM > 50000) {
+            this.fuelUsage = fuelUsage * 1.098;
+        } else {
+            this.fuelUsage = fuelUsage;
+        }
         this.engine = engine;
         this.manufacturer = manufacturer;
         this.driven_KM = driven_KM;
+        this.price = price * (1 - this.manufacturer.getDiscount());
     }
 
     public void setEngine(Engine engine) {
@@ -35,7 +39,7 @@ public class Car {
         this.color = color;
     }
 
-    public void setFuelUsage(int fuelUsage) {
+    public void setFuelUsage(double fuelUsage) {
         this.fuelUsage = fuelUsage;
     }
 
@@ -43,7 +47,7 @@ public class Car {
         this.manufacturer = manufacturer;
     }
 
-    public void setPrice(int price) {
+    public void setPrice(double price) {
         this.price = price;
     }
 
@@ -55,11 +59,11 @@ public class Car {
         return color;
     }
 
-    public int getFuelUsage() {
+    public double getFuelUsage() {
         return fuelUsage;
     }
 
-    public int getPrice() {
+    public double getPrice() {
         return price;
     }
 
@@ -71,4 +75,11 @@ public class Car {
         return speed;
     }
 
+    public void setDriven_KM(int driven_KM) {
+        this.driven_KM = driven_KM;
+    }
+
+    public int getDriven_KM() {
+        return driven_KM;
+    }
 }

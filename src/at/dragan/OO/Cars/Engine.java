@@ -6,10 +6,11 @@ public class Engine {
     int horsepower;
     private TYPE type;
 
-    public Engine(TYPE type, int horsepower){
+    public Engine(TYPE type, int horsepower) {
         this.type = type;
         this.horsepower = horsepower;
     }
+
     public int getHorsepower() {
         return horsepower;
     }
@@ -25,4 +26,5 @@ public class Engine {
     public void setType(TYPE type) {
         this.type = type;
     }
+
 }
