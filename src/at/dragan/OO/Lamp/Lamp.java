@@ -14,13 +14,48 @@ public class Lamp {
     public void addLightElement(LightElement lightElement) {
         this.lights.add(lightElement);
     }
-    public void turnOn(LightElement lightElement){
+
+    public void turnOn(LightElement lightElement) {
         if (lights.contains(lightElement)) {
             lightElement.turnOn();
         } else {
             System.out.println("Das Lichtelement gehört nicht zur Lampe.");
         }
+    }
+
+    public void turnOff(LightElement lightElement) {
+        if (lights.contains(lightElement)) {
+            lightElement.turnOff();
+        } else {
+            System.out.println("Das Lichtelement gehört nicht zur Lampe.");
         }
+    }
+
+    public void turnAllOff() {
+        for (LightElement light : lights) {
+            light.turnOff();
+        }
+    }
+
+    public void turnAllOn() {
+        for (LightElement light : lights) {
+            light.turnOn();
+        }
+    }
+
+    public void printNamesOfLightElements() {
+        for (LightElement light : lights) {
+            System.out.println(light.getName());
+        }
+    }
+
+    public double getOverallPowerUsage() {
+        int overalPowerUsage = 0;
+        for (LightElement light : lights) {
+            overalPowerUsage += light.getPowerConsumption();
+        }
+        return overalPowerUsage;
+    }
 
 
     public List<LightElement> getLights() {

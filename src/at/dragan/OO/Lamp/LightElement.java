@@ -1,7 +1,7 @@
 package at.dragan.OO.Lamp;
 
 public class LightElement {
-    private String  color;
+    private String color;
     private String name;
     private int powerConsumption;
     private boolean status;
@@ -13,15 +13,24 @@ public class LightElement {
         this.status = status;
     }
 
-    public void turnOn(){
-        if (status){
+    public void turnOn() {
+        if (status) {
             System.out.println("Mein Name ist " + name + ". Ich bin bereits eingeschaltet");
-        }
-        else {
+        } else {
             this.status = true;
             this.powerConsumption = this.powerConsumption + 5;
         }
     }
+
+    public void turnOff() {
+        if (!status) {
+            System.out.println("Mein Name ist " + name + ". Ich bin bereits ausgeschaltet");
+        } else {
+            this.status = false;
+            this.powerConsumption = this.powerConsumption - 5;
+        }
+    }
+
 
     public String getColor() {
         return color;
@@ -55,3 +64,4 @@ public class LightElement {
         this.status = status;
     }
 }
+
