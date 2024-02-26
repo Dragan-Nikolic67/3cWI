@@ -15,6 +15,11 @@ public class main {
         c1.addNumber(n5);
         System.out.println(c1.add());
         System.out.println(c1.subtract());
+        System.out.println(c1.multiply());
+        System.out.println(c1.divide());
+        System.out.println(c1.cos(n2));
+        System.out.println(c1.sin(n2));
+        System.out.println(c1.sqrt(n2));
 
 
     }

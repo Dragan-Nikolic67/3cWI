@@ -7,9 +7,10 @@ public class Main {
         LightElement e3 = new LightElement("Yellow", "Damien", 0, false);
 
         Lamp l1 = new Lamp();
-
+e1.turnOn();
         l1.addLightElement(e1);
         l1.addLightElement(e2);
+        System.out.println(e1.isStatus());
 
         l1.turnAllOn();
 
