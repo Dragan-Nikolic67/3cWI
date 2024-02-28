@@ -2,25 +2,15 @@ package at.dragan.OO.Calculator;
 
 public class main {
     public static void main(String[] args) {
-        Numbers n1 = new Numbers(20);
-        Numbers n2 = new Numbers(20);
-        Numbers n3 = new Numbers(20);
-        Numbers n4 = new Numbers(20);
-        Numbers n5 = new Numbers(20);
+
         Calculator c1 = new Calculator();
-        c1.addNumber(n1);
-        c1.addNumber(n2);
-        c1.addNumber(n3);
-        c1.addNumber(n4);
-        c1.addNumber(n5);
-        System.out.println(c1.add());
-        System.out.println(c1.subtract());
-        System.out.println(c1.multiply());
-        System.out.println(c1.divide());
-        System.out.println(c1.cos(n2));
-        System.out.println(c1.sin(n2));
-        System.out.println(c1.sqrt(n2));
-
-
+        SuperCalculator s1 = new SuperCalculator();
+        System.out.println("Addition: " + c1.add(2, 3));
+        System.out.println("Subtraktion: " + c1.subtract(4, 60));
+        System.out.println("Multiplikation: " + c1.multiply(4, 5));
+        System.out.println("Division: " + c1.divide(20, 30));
+        System.out.println("Cosinus: " + s1.cos(20));
+        System.out.println("Sinus: " + s1.sin(20));
+        System.out.println("Quadratwurzel: " + s1.sqrt(25));
     }
 }
