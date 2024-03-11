@@ -34,4 +34,8 @@ public class PhoneFile {
     public String getName() {
         return name;
     }
+
+    public void setSizeInMB(int sizeInMB) {
+        this.sizeInMB = sizeInMB;
+    }
 }
